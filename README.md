@@ -1,4 +1,4 @@
-# 🇻🇳 Vietnam Discovery
+# Vietnam Discovery
 
 ### Trọn Vẹn Vẻ Đẹp Việt Nam
 
