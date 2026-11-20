@@ -53,11 +53,8 @@
 ## 📁 Cấu Trúc Thư Mục
 
 ```text
-webdulich-mcs/
-├── .env.example               # Mẫu biến môi trường
-├── .gitignore                 # Danh sách file bỏ qua khi commit (loại trừ .env)
-├── docker-compose.yml         # File điều phối khởi chạy toàn bộ hệ thống
-├── README.md                  # Tài liệu hướng dẫn dự án
+VietnamDiscovery/
+├── .github/                   # Cấu hình CI/CD workflows (GitHub Actions)
 ├── api-gateway/               # Cấu hình Nginx API Gateway & Dockerfile
 ├── frontend/                  # Mã nguồn ứng dụng React + Vite
 ├── province-service/          # Microservice quản lý tỉnh thành
@@ -67,60 +64,27 @@ webdulich-mcs/
 ├── user-service/              # Microservice xác thực và quản lý tài khoản
 ├── e2e/                       # Bộ kiểm thử tự động E2E (Playwright)
 ├── scripts/                   # Script triển khai (seed data, EC2, SSL)
-└── db/
-    ├── init.sql               # Script khởi tạo cơ sở dữ liệu
-    └── backup_xampp.sql       # Bản sao lưu dữ liệu mẫu
-```
-
----
-
-## 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy
-
-### 1. Yêu cầu tiên quyết
-
-- [Docker](https://www.docker.com/) và **Docker Compose** đã được cài đặt trên máy.
-- File `.env` đặt tại thư mục gốc dự án (xem phần cấu hình môi trường bên dưới).
-
-### 2. Chuẩn bị file môi trường (`.env`)
-
-> [!IMPORTANT]
-> **🔐 LƯU Ý BẢO MẬT VỀ FILE MÔI TRƯỜNG (`.env`)**
->
-> Hệ thống tích hợp các dịch vụ bên ngoài như **Google Gemini AI API**, **Google OAuth 2.0**, **Hệ thống gửi mã OTP qua Gmail SMTP** và **JWT Secret Key**.
->
-> Vì lý do bảo mật, file `.env` chứa các khóa bí mật thực tế **KHÔNG ĐƯỢC ĐƯA LÊN GITHUB**.
->
-> 👉 Sao chép từ file mẫu `.env.example` và tự điền thông tin của bạn:
-> ```bash
-> cp .env.example .env
-> ```
-
-### 3. Khởi chạy toàn bộ hệ thống với Docker Compose
-
-```bash
-# 1. Clone repository về máy
+├── docs/
+│   └── screenshots/           # Thư mục lưu ảnh chụp màn hình giao diện
+├── db/
+│   ├── init.sql               # Script khởi tạo cơ sở dữ liệu
+│   └── backup_xampp.sql       # Bản sao lưu dữ liệu mẫu
+├── .env                       # Biến môi trường cấu hình hệ thống (không commit)
+├── .gitignore                 # Danh sách file bỏ qua khi commit (loại trừ .env)
+├── docker-compose.yml         # File điều phối khởi chạy toàn bộ hệ thống
+└── README.md                  # Tài liệu hướng dẫn dự án
+🚀 Hướng Dẫn Cài Đặt & Khởi Chạy1. Yêu cầu tiên quyếtDocker và Docker Compose đã được cài đặt trên máy.File .env đặt tại thư mục gốc dự án (xem phần cấu hình môi trường bên dưới).2. Chuẩn bị file môi trường (.env)[!IMPORTANT]🔐 LƯU Ý BẢO MẬT VỀ FILE MÔI TRƯỜNG (.env)Hệ thống tích hợp các dịch vụ bên ngoài như Google Gemini AI API, Google OAuth 2.0, Hệ thống gửi mã OTP qua Gmail SMTP và JWT Secret Key.Vì lý do bảo mật, file .env chứa các khóa bí mật thực tế KHÔNG ĐƯỢC ĐƯA LÊN GITHUB.3. Khởi chạy toàn bộ hệ thống với Docker ComposeBash# 1. Clone repository về máy
 git clone <repository-url>
-cd webdulich-mcs
+cd VietnamDiscovery
 
-# 2. Chuẩn bị file môi trường (xem bước 2 ở trên)
+# 2. Tạo và cấu hình file .env tại thư mục gốc dự án
 
 # 3. Build và khởi động toàn bộ containers
 docker-compose up --build -d
 
 # 4. Kiểm tra trạng thái các container
 docker-compose ps
-```
-
-> 💡 Cơ sở dữ liệu được khởi tạo tự động bằng `db/init.sql` khi container MySQL lần đầu chạy (Database: `vietnamdiscovery`).
-
-### 4. Truy cập ứng dụng
-
-- Mở trình duyệt và truy cập: **`http://localhost:2222`**
-
-### 5. Chạy dịch vụ ở môi trường phát triển (không dùng Docker)
-
-```bash
-# Ví dụ với frontend
+💡 Cơ sở dữ liệu được khởi tạo tự động bằng db/init.sql khi container MySQL lần đầu chạy (Database: vietnamdiscovery).4. Truy cập ứng dụngMở trình duyệt và truy cập: http://localhost:22225. Chạy dịch vụ ở môi trường phát triển (không dùng Docker)Bash# Ví dụ với frontend
 cd frontend
 npm install
 npm run dev        # Chạy tại http://localhost:3000
@@ -129,51 +93,6 @@ npm run dev        # Chạy tại http://localhost:3000
 cd user-service
 npm install
 npm start
-```
-
----
-
-## 🔑 Tài Khoản Quản Trị Mặc Định
-
-Sau khi import cơ sở dữ liệu từ file `db/init.sql`, hệ thống có sẵn tài khoản quản trị:
-
-- **Username:** `admin`
-- **Email:** `admin@vietnamtourism.vn`
-- **Role:** `admin`
-
----
-
-## 🖼️ Hình ảnh giao diện
-
-> *Giao diện được thiết kế theo phong cách hiện đại, nền trắng kết hợp xanh lá đậm và xanh ngọc làm màu thương hiệu.*
->
-> *(Bạn có thể chụp màn hình các trang chính: Trang chủ, Khám phá tỉnh thành, Chi tiết địa điểm, Lập lịch trình AI, Trang quản trị và đặt vào thư mục `docs/screenshots/` để hiển thị tại đây.)*
-
-```markdown
-![Trang chủ](docs/screenshots/home.png)
-![Khám phá tỉnh thành](docs/screenshots/provinces.png)
-```
-
----
-
-## 🧪 Kiểm thử E2E
-
-Dự án có bộ kiểm thử tự động Playwright tại thư mục `e2e/`:
-
-```bash
-cd e2e
+🔑 Tài Khoản Quản Trị Mặc ĐịnhSau khi import cơ sở dữ liệu từ file db/init.sql, hệ thống có sẵn tài khoản quản trị:Username: adminEmail: admin@vietnamtourism.vnRole: admin🖼️ Hình ảnh giao diệnGiao diện được thiết kế theo phong cách hiện đại, nền trắng kết hợp xanh lá đậm và cam đất làm điểm nhấn thương hiệu, hỗ trợ chuyển đổi trực tiếp chế độ 63/34 tỉnh thành.   🧪 Kiểm thử E2EDự án có bộ kiểm thử tự động Playwright tại thư mục e2e/:Bashcd e2e
 npm install
 npx playwright test
-```
-
----
-
-## 👥 Project Developer & Ghi nhận đóng góp
-
-- **Project Developer:** Nguyễn Trọng Hải Nam
-- **Cộng tác viên:** Bùi Nam Khánh, Nguyễn Quang Nam Anh, Phan Quang Minh
-- **Nguồn gốc dự án:** Dự án được phát triển dựa trên repo gốc [`webdulich-mcs`](https://github.com/ngocanh2610/webdulich-mcs) của nhóm thực hiện ban đầu, sau đó được rebranding và phát triển tiếp thành **Vietnam Discovery**.
-
-## 📄 Giấy phép
-
-Dự án được phân phối cho mục đích học tập và tham khảo. Vui lòng giữ nguyên thông tin ghi nhận contributors và nguồn gốc dự án khi sử dụng hoặc phân phối lại.
