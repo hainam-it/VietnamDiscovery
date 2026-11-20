@@ -1,0 +1,11 @@
+*.sock
+.env
+*.pem
+media-service/uploads/
+node_modules/
+**/node_modules/
+frontend/dist/
+e2e/playwright-report/
+e2e/test-results/
+playwright-report/
+test-results/

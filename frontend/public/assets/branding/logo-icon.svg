@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="vdSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E8C51"/>
+      <stop offset="1" stop-color="#087443"/>
+    </linearGradient>
+    <linearGradient id="vdMtn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#075C37"/>
+      <stop offset="1" stop-color="#087443"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#vdSky)"/>
+  <!-- Dãy núi -->
+  <path d="M8 44 L20 26 L28 37 L36 22 L46 38 L52 30 L56 36 L56 46 L8 46 Z" fill="url(#vdMtn)" opacity="0.95"/>
+  <!-- Dòng sông uốn lượn -->
+  <path d="M6 50 C 18 44, 26 54, 36 50 C 44 47, 50 51, 58 48" stroke="#FFC928" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+  <!-- Tháp cổ màu cam -->
+  <g>
+    <path d="M30 14 L32 9 L34 14 L33.5 15.5 L30.5 15.5 Z" fill="#FFC928"/>
+    <path d="M27.5 15.5 L36.5 15.5 L34.8 19 L29.2 19 Z" fill="#F47721"/>
+    <rect x="29.5" y="19" width="5" height="6" rx="0.8" fill="#F47721"/>
+    <path d="M26.5 25 L37.5 25 L36 28 L28 28 Z" fill="#F47721"/>
+  </g>
+  <!-- Ngôi sao vàng -->
+  <path d="M50 12 l1.6 3.3 3.6 0.5 -2.6 2.5 0.6 3.6 -3.2 -1.7 -3.2 1.7 0.6 -3.6 -2.6 -2.5 3.6 -0.5 Z" fill="#FFC928"/>
+</svg>

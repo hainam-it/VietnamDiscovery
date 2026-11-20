@@ -1,0 +1,952 @@
+[
+  {
+    "id": "ha-noi",
+    "slug": "ha-noi",
+    "name": "Hà Nội",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Hà Nội",
+    "area": 3358.6,
+    "population": 8246600,
+    "description": "Thủ đô nghìn năm văn hiến giữ nguyên địa giới hành chính, trung tâm chính trị – văn hóa – lịch sử – kinh tế hàng đầu cả nước.",
+    "image": "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&q=80",
+    "locationCount": 12,
+    "highlights": [
+      "Hồ Hoàn Kiếm",
+      "Văn Miếu - Quốc Tử Giám",
+      "Phố Cổ 36 phố phường"
+    ],
+    "mergedFrom": [
+      "Hà Nội"
+    ],
+    "mergedSlugs": [
+      "ha-noi"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "quang-ninh",
+    "slug": "quang-ninh",
+    "name": "Quảng Ninh",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Hạ Long",
+    "area": 6207.9,
+    "population": 1330955,
+    "description": "Vùng di sản thiên nhiên thế giới Vịnh Hạ Long, Yên Tử linh thiêng và quần đảo Cô Tô – Vân Đồn tuyệt sắc.",
+    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Vịnh Hạ Long",
+      "Đảo Cát Bà",
+      "Đảo Cô Tô"
+    ],
+    "mergedFrom": [
+      "Quảng Ninh"
+    ],
+    "mergedSlugs": [
+      "quang-ninh"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "cao-bang",
+    "slug": "cao-bang",
+    "name": "Cao Bằng",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Cao Bằng",
+    "area": 6700.3,
+    "population": 535658,
+    "description": "Miền non nước Công viên Địa chất Toàn cầu UNESCO với thác Bản Giốc hùng vĩ và khu di tích lịch sử Pác Bó.",
+    "image": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
+    "locationCount": 3,
+    "highlights": [
+      "Thác Bản Giốc",
+      "Hang Pác Bó",
+      "Hồ Thang Hen"
+    ],
+    "mergedFrom": [
+      "Cao Bằng"
+    ],
+    "mergedSlugs": [
+      "cao-bang"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "lang-son",
+    "slug": "lang-son",
+    "name": "Lạng Sơn",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Lạng Sơn",
+    "area": 8310.1,
+    "population": 782811,
+    "description": "Cửa ngõ giao thương biên giới Đông Bắc nổi tiếng với đỉnh Mẫu Sơn mờ sương, động Tam Thanh và ẩm thực xứ Lạng.",
+    "image": "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?w=800&q=80",
+    "locationCount": 2,
+    "highlights": [
+      "Núi Mẫu Sơn",
+      "Hang Gió",
+      "Cửa khẩu Đồng Đăng"
+    ],
+    "mergedFrom": [
+      "Lạng Sơn"
+    ],
+    "mergedSlugs": [
+      "lang-son"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "lai-chau",
+    "slug": "lai-chau",
+    "name": "Lai Châu",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Lai Châu",
+    "area": 9068.8,
+    "population": 474428,
+    "description": "Vùng núi Tây Bắc hùng vĩ với những đỉnh núi cao bậc nhất Việt Nam như Putaleng, Bạch Mộc Lương Tử và đèo Ô Quy Hồ.",
+    "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+    "locationCount": 2,
+    "highlights": [
+      "Đỉnh Putaleng",
+      "Sìn Hồ",
+      "Thác Tắc Tình"
+    ],
+    "mergedFrom": [
+      "Lai Châu"
+    ],
+    "mergedSlugs": [
+      "lai-chau"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "dien-bien",
+    "slug": "dien-bien",
+    "name": "Điện Biên",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Điện Biên Phủ",
+    "area": 9562.9,
+    "population": 598856,
+    "description": "Mảnh đất lịch sử lừng lẫy Điện Biên Phủ gắn liền thung lũng Mường Thanh, cực Tây A Pa Chải và mùa hoa ban trắng.",
+    "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "locationCount": 3,
+    "highlights": [
+      "Di tích Điện Biên Phủ",
+      "Mường Phăng",
+      "Hồ Pá Khoang"
+    ],
+    "mergedFrom": [
+      "Điện Biên"
+    ],
+    "mergedSlugs": [
+      "dien-bien"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "son-la",
+    "slug": "son-la",
+    "name": "Sơn La",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Sơn La",
+    "area": 14174.4,
+    "population": 1282895,
+    "description": "Trái tim Tây Bắc với cao nguyên Mộc Châu xanh mướt đồi chè, biển mây Tà Xùa và lòng hồ thủy điện Sơn La.",
+    "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80",
+    "locationCount": 3,
+    "highlights": [
+      "Cao Nguyên Mộc Châu",
+      "Thủy Điện Sơn La",
+      "Đèo Pha Đin"
+    ],
+    "mergedFrom": [
+      "Sơn La"
+    ],
+    "mergedSlugs": [
+      "son-la"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "thanh-hoa",
+    "slug": "thanh-hoa",
+    "name": "Thanh Hóa",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Thanh Hóa",
+    "area": 11131,
+    "population": 3640128,
+    "description": "Vùng đất địa linh Bắc Trung Bộ hội tụ Di sản UNESCO Thành Nhà Hồ, biển Sầm Sơn, Pù Luông và suối cá thần Cẩm Lương.",
+    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80",
+    "locationCount": 3,
+    "highlights": [
+      "Thành Nhà Hồ",
+      "Biển Sầm Sơn",
+      "Suối Cá Thần"
+    ],
+    "mergedFrom": [
+      "Thanh Hóa"
+    ],
+    "mergedSlugs": [
+      "thanh-hoa"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "nghe-an",
+    "slug": "nghe-an",
+    "name": "Nghệ An",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Vinh",
+    "area": 16490.9,
+    "population": 3327791,
+    "description": "Tỉnh có diện tích lớn vùng Bắc Trung Bộ với Khu di tích Kim Liên quê Bác, biển Cửa Lò và Vườn quốc gia Pù Mát.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "locationCount": 3,
+    "highlights": [
+      "Quê Bác Kim Liên",
+      "Biển Cửa Lò",
+      "Vườn QG Pù Mát"
+    ],
+    "mergedFrom": [
+      "Nghệ An"
+    ],
+    "mergedSlugs": [
+      "nghe-an"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "ha-tinh",
+    "slug": "ha-tinh",
+    "name": "Hà Tĩnh",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Hà Tĩnh",
+    "area": 5997.8,
+    "population": 1264000,
+    "description": "Dải đất núi Hồng – sông La giàu truyền thống văn hóa với chùa Hương Tích, Ngã ba Đồng Lộc và biển Thiên Cầm.",
+    "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80",
+    "locationCount": 2,
+    "highlights": [
+      "Ngã Ba Đồng Lộc",
+      "Biển Thiên Cầm"
+    ],
+    "mergedFrom": [
+      "Hà Tĩnh"
+    ],
+    "mergedSlugs": [
+      "ha-tinh"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "hue",
+    "slug": "hue",
+    "name": "TP. Huế",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Huế",
+    "area": 5033.2,
+    "population": 1128620,
+    "description": "Thành phố di sản trực thuộc Trung ương lưu giữ quần thể Đại Nội, lăng tẩm triều Nguyễn và nhã nhạc cung đình UNESCO.",
+    "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Đại Nội Huế",
+      "Chùa Thiên Mụ",
+      "Lăng Tự Đức"
+    ],
+    "mergedFrom": [
+      "Thừa Thiên Huế"
+    ],
+    "mergedSlugs": [
+      "hue",
+      "thua-thien-hue"
+    ],
+    "note": "Giữ nguyên"
+  },
+  {
+    "id": "tuyen-quang",
+    "slug": "tuyen-quang",
+    "name": "Tuyên Quang",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Tuyên Quang",
+    "area": 13813.7,
+    "population": 1634479,
+    "description": "Hợp nhất Tuyên Quang và Hà Giang, kết nối Chiến khu Tân Trào, hồ Na Hang với Cao nguyên đá Đồng Văn và đèo Mã Pí Lèng.",
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Tân Trào",
+      "Thác Mơ",
+      "Suối Khoáng Mỹ Lâm",
+      "Cao nguyên đá Đồng Văn",
+      "Đèo Mã Pí Lèng"
+    ],
+    "mergedFrom": [
+      "Tuyên Quang",
+      "Hà Giang"
+    ],
+    "mergedSlugs": [
+      "tuyen-quang",
+      "ha-giang"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "lao-cai",
+    "slug": "lao-cai",
+    "name": "Lào Cai",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Yên Bái",
+    "area": 13263.5,
+    "population": 1568607,
+    "description": "Hợp nhất Lào Cai và Yên Bái, quy tụ Sa Pa, đỉnh Fansipan 3.143m, ruộng bậc thang Mù Cang Chải và hồ Thác Bà.",
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "locationCount": 8,
+    "highlights": [
+      "Sa Pa",
+      "Đỉnh Fansipan",
+      "Thị trấn Sa Pa",
+      "Mù Cang Chải",
+      "Hồ Thác Bà"
+    ],
+    "mergedFrom": [
+      "Lào Cai",
+      "Yên Bái"
+    ],
+    "mergedSlugs": [
+      "lao-cai",
+      "yen-bai"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "thai-nguyen",
+    "slug": "thai-nguyen",
+    "name": "Thái Nguyên",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Thái Nguyên",
+    "area": 8390.4,
+    "population": 1600805,
+    "description": "Hợp nhất Thái Nguyên và Bắc Kạn, kết nối đồi chè Tân Cương, hồ Núi Cốc với kỳ quan hồ nước ngọt tự nhiên Ba Bể.",
+    "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80",
+    "locationCount": 5,
+    "highlights": [
+      "Hồ Núi Cốc",
+      "Chè Tân Cương",
+      "ATK Định Hóa",
+      "Hồ Ba Bể",
+      "Vườn QG Ba Bể"
+    ],
+    "mergedFrom": [
+      "Thái Nguyên",
+      "Bắc Kạn"
+    ],
+    "mergedSlugs": [
+      "thai-nguyen",
+      "bac-kan"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "phu-tho",
+    "slug": "phu-tho",
+    "name": "Phú Thọ",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Việt Trì",
+    "area": 9364.4,
+    "population": 3446175,
+    "description": "Hợp nhất Phú Thọ, Vĩnh Phúc và Hòa Bình – vùng Đất Tổ Hùng Vương mở rộng cùng thị trấn mây Tam Đảo và lòng hồ Hòa Bình.",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+    "locationCount": 8,
+    "highlights": [
+      "Đền Hùng",
+      "Vườn QG Xuân Sơn",
+      "Ao Giời - Suối Tiên",
+      "Tam Đảo",
+      "Hồ Đại Lải"
+    ],
+    "mergedFrom": [
+      "Phú Thọ",
+      "Vĩnh Phúc",
+      "Hòa Bình"
+    ],
+    "mergedSlugs": [
+      "phu-tho",
+      "vinh-phuc",
+      "hoa-binh"
+    ],
+    "note": "Sáp nhập từ 3 đơn vị hành chính"
+  },
+  {
+    "id": "bac-ninh",
+    "slug": "bac-ninh",
+    "name": "Bắc Ninh",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Bắc Giang",
+    "area": 4671.6,
+    "population": 3172790,
+    "description": "Hợp nhất Bắc Ninh và Bắc Giang – vùng Kinh Bắc trọn vẹn của dân ca Quan họ UNESCO, chùa Dâu, chùa Vĩnh Nghiêm và Tây Yên Tử.",
+    "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+    "locationCount": 5,
+    "highlights": [
+      "Chùa Dâu",
+      "Làng tranh Đông Hồ",
+      "Đền Đô",
+      "Chùa Vĩnh Nghiêm",
+      "Suối Mỡ"
+    ],
+    "mergedFrom": [
+      "Bắc Ninh",
+      "Bắc Giang"
+    ],
+    "mergedSlugs": [
+      "bac-ninh",
+      "bac-giang"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "hung-yen",
+    "slug": "hung-yen",
+    "name": "Hưng Yên",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Hưng Yên",
+    "area": 2493.5,
+    "population": 3038300,
+    "description": "Hợp nhất Hưng Yên và Thái Bình, kết nối thương cảng cổ Phố Hiến, Văn Miếu Xích Đằng với chùa Keo và biển cồn Vành – Đồng Châu.",
+    "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+    "locationCount": 4,
+    "highlights": [
+      "Phố Hiến",
+      "Văn Miếu Xích Đằng",
+      "Chùa Keo",
+      "Bãi Biển Đồng Châu"
+    ],
+    "mergedFrom": [
+      "Hưng Yên",
+      "Thái Bình"
+    ],
+    "mergedSlugs": [
+      "hung-yen",
+      "thai-binh"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "hai-phong",
+    "slug": "hai-phong",
+    "name": "TP. Hải Phòng",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Hải Phòng",
+    "area": 3195.4,
+    "population": 3920014,
+    "description": "Hợp nhất TP. Hải Phòng và Hải Dương, kết nối quần đảo Cát Bà – Lan Hạ với quần thể di sản thế giới Côn Sơn – Kiếp Bạc.",
+    "image": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
+    "locationCount": 7,
+    "highlights": [
+      "Đảo Cát Bà",
+      "Đồ Sơn",
+      "Bạch Long Vĩ",
+      "Côn Sơn - Kiếp Bạc",
+      "Đảo Cò Chi Lăng"
+    ],
+    "mergedFrom": [
+      "Hải Phòng",
+      "Hải Dương"
+    ],
+    "mergedSlugs": [
+      "hai-phong",
+      "hai-duong"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "ninh-binh",
+    "slug": "ninh-binh",
+    "name": "Ninh Bình",
+    "region": "Miền Bắc",
+    "regionCode": "north",
+    "capital": "Hoa Lư",
+    "area": 3908.2,
+    "population": 3700600,
+    "description": "Hợp nhất Ninh Bình, Hà Nam và Nam Định, tạo siêu quần thể du lịch tâm linh – di sản Tràng An, cố đô Hoa Lư, chùa Tam Chúc và Đền Trần.",
+    "image": "https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=800&q=80",
+    "locationCount": 9,
+    "highlights": [
+      "Tràng An",
+      "Tam Cốc - Bích Động",
+      "Hang Múa",
+      "Chùa Tam Chúc",
+      "Kẽm Trống"
+    ],
+    "mergedFrom": [
+      "Ninh Bình",
+      "Hà Nam",
+      "Nam Định"
+    ],
+    "mergedSlugs": [
+      "ninh-binh",
+      "ha-nam",
+      "nam-dinh"
+    ],
+    "note": "Sáp nhập từ 3 đơn vị hành chính"
+  },
+  {
+    "id": "quang-tri",
+    "slug": "quang-tri",
+    "name": "Quảng Trị",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Đồng Hới",
+    "area": 12811.3,
+    "population": 1542624,
+    "description": "Hợp nhất Quảng Bình và Quảng Trị, hội tụ thiên đường hang động Phong Nha – Sơn Đoòng UNESCO cùng Thành cổ Quảng Trị và đảo Cồn Cỏ.",
+    "image": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Thành Cổ Quảng Trị",
+      "Cầu Hiền Lương",
+      "Nghĩa trang Trường Sơn",
+      "Hang Sơn Đoòng",
+      "Phong Nha"
+    ],
+    "mergedFrom": [
+      "Quảng Trị",
+      "Quảng Bình"
+    ],
+    "mergedSlugs": [
+      "quang-tri",
+      "quang-binh"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "da-nang",
+    "slug": "da-nang",
+    "name": "TP. Đà Nẵng",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Đà Nẵng",
+    "area": 11723.3,
+    "population": 2628210,
+    "description": "Hợp nhất TP. Đà Nẵng và Quảng Nam, kết nối Bà Nà Hills, bán đảo Sơn Trà với Phố cổ Hội An, Thánh địa Mỹ Sơn và Cù Lao Chàm.",
+    "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&q=80",
+    "locationCount": 11,
+    "highlights": [
+      "Bà Nà Hills",
+      "Ngũ Hành Sơn",
+      "Bãi Mỹ Khê",
+      "Phố cổ Hội An",
+      "Thánh địa Mỹ Sơn"
+    ],
+    "mergedFrom": [
+      "Đà Nẵng",
+      "Quảng Nam"
+    ],
+    "mergedSlugs": [
+      "da-nang",
+      "quang-nam"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "quang-ngai",
+    "slug": "quang-ngai",
+    "name": "Quảng Ngãi",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Quảng Ngãi",
+    "area": 14843.5,
+    "population": 1797538,
+    "description": "Hợp nhất Quảng Ngãi và Kon Tum – hành lang độc đáo nối biển đảo Lý Sơn xanh ngọc với đại ngàn Măng Đen và Nhà thờ Gỗ Kon Tum.",
+    "image": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80",
+    "locationCount": 5,
+    "highlights": [
+      "Đảo Lý Sơn",
+      "Sa Huỳnh",
+      "Đảo Bé",
+      "Nhà Thờ Gỗ",
+      "Vườn QG Chư Mom Ray"
+    ],
+    "mergedFrom": [
+      "Quảng Ngãi",
+      "Kon Tum"
+    ],
+    "mergedSlugs": [
+      "quang-ngai",
+      "kon-tum"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "gia-lai",
+    "slug": "gia-lai",
+    "name": "Gia Lai",
+    "region": "Tây Nguyên",
+    "regionCode": "highland",
+    "capital": "Quy Nhơn",
+    "area": 21603.1,
+    "population": 3007447,
+    "description": "Hợp nhất Gia Lai và Bình Định, kết nối Biển Hồ Pleiku, núi lửa Chư Đăng Ya với thiên đường biển Kỳ Co – Eo Gió Quy Nhơn.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Biển Hồ",
+      "Thác Phú Cường",
+      "Làng rượu cần",
+      "Biển Quy Nhơn",
+      "Eo Gió"
+    ],
+    "mergedFrom": [
+      "Gia Lai",
+      "Bình Định"
+    ],
+    "mergedSlugs": [
+      "gia-lai",
+      "binh-dinh"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "khanh-hoa",
+    "slug": "khanh-hoa",
+    "name": "Khánh Hòa",
+    "region": "Miền Trung",
+    "regionCode": "central",
+    "capital": "Nha Trang",
+    "area": 8553,
+    "population": 1820867,
+    "description": "Hợp nhất Khánh Hòa và Ninh Thuận, ôm trọn hai vịnh biển đẹp nhất Việt Nam là Nha Trang và Vĩnh Hy cùng văn hóa tháp Chăm đặc sắc.",
+    "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=800&q=80",
+    "locationCount": 7,
+    "highlights": [
+      "Vịnh Nha Trang",
+      "Tháp Bà Ponagar",
+      "Đảo Hòn Tre",
+      "Đồi Cát Hồng",
+      "Tháp Chàm Po Klong Garai"
+    ],
+    "mergedFrom": [
+      "Khánh Hòa",
+      "Ninh Thuận"
+    ],
+    "mergedSlugs": [
+      "khanh-hoa",
+      "ninh-thuan"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "lam-dong",
+    "slug": "lam-dong",
+    "name": "Lâm Đồng",
+    "region": "Tây Nguyên",
+    "regionCode": "highland",
+    "capital": "Đà Lạt",
+    "area": 24290.5,
+    "population": 3138038,
+    "description": "Hợp nhất Lâm Đồng, Đắk Nông và Bình Thuận – hành lang du lịch từ cao nguyên ngàn hoa Đà Lạt, hồ Tà Đùng xuống thiên đường biển Mũi Né – Phú Quý.",
+    "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "locationCount": 11,
+    "highlights": [
+      "Đà Lạt",
+      "Hồ Xuân Hương",
+      "Thung Lũng Tình Yêu",
+      "Thác Dray Nur",
+      "Hồ Tà Đùng"
+    ],
+    "mergedFrom": [
+      "Lâm Đồng",
+      "Đắk Nông",
+      "Bình Thuận"
+    ],
+    "mergedSlugs": [
+      "lam-dong",
+      "dak-nong",
+      "binh-thuan"
+    ],
+    "note": "Sáp nhập từ 3 đơn vị hành chính"
+  },
+  {
+    "id": "dak-lak",
+    "slug": "dak-lak",
+    "name": "Đắk Lắk",
+    "region": "Tây Nguyên",
+    "regionCode": "highland",
+    "capital": "Buôn Ma Thuột",
+    "area": 18186,
+    "population": 2770796,
+    "description": "Hợp nhất Đắk Lắk và Phú Yên, kết nối thủ phủ cà phê Buôn Ma Thuột, thác Dray Nur với Gành Đá Đĩa và Mũi Điện đón bình minh.",
+    "image": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Hồ Lắk",
+      "Vườn QG Yok Đôn",
+      "Buôn Đôn",
+      "Gành Đá Đĩa",
+      "Mũi Điện"
+    ],
+    "mergedFrom": [
+      "Đắk Lắk",
+      "Phú Yên"
+    ],
+    "mergedSlugs": [
+      "dak-lak",
+      "phu-yen"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "tp-hcm",
+    "slug": "tp-hcm",
+    "name": "TP. Hồ Chí Minh",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "TP. Hồ Chí Minh",
+    "area": 6772.2,
+    "population": 13109400,
+    "description": "Siêu đô thị hợp nhất TP. Hồ Chí Minh, Bình Dương và Bà Rịa-Vũng Tàu, trải dài từ trung tâm Sài Gòn sôi động đến biển Vũng Tàu và Côn Đảo.",
+    "image": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
+    "locationCount": 13,
+    "highlights": [
+      "Bến Thành",
+      "Dinh Thống Nhất",
+      "Nhà thờ Đức Bà",
+      "Đại Nam",
+      "Làng sơn mài Tương Bình Hiệp"
+    ],
+    "mergedFrom": [
+      "TP. Hồ Chí Minh",
+      "Bình Dương",
+      "Bà Rịa-Vũng Tàu"
+    ],
+    "mergedSlugs": [
+      "tp-hcm",
+      "binh-duong",
+      "ba-ria-vung-tau"
+    ],
+    "note": "Sáp nhập từ 3 đơn vị hành chính"
+  },
+  {
+    "id": "dong-nai",
+    "slug": "dong-nai",
+    "name": "Đồng Nai",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Biên Hòa",
+    "area": 12780.7,
+    "population": 4097845,
+    "description": "Hợp nhất Đồng Nai và Bình Phước, sở hữu hệ sinh thái rừng nhiệt đới rộng lớn với Vườn quốc gia Cát Tiên, Bù Gia Mập và hồ Trị An.",
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "locationCount": 4,
+    "highlights": [
+      "Vườn QG Cát Tiên",
+      "Hồ Trị An",
+      "Vườn QG Bù Gia Mập",
+      "Thác Mơ"
+    ],
+    "mergedFrom": [
+      "Đồng Nai",
+      "Bình Phước"
+    ],
+    "mergedSlugs": [
+      "dong-nai",
+      "binh-phuoc"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "tay-ninh",
+    "slug": "tay-ninh",
+    "name": "Tây Ninh",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Tân An",
+    "area": 8533,
+    "population": 2874465,
+    "description": "Hợp nhất Tây Ninh và Long An, kết nối Nóc nhà Nam Bộ Núi Bà Đen, Tòa Thánh Tây Ninh với vùng sinh thái ngập nước Làng nổi Tân Lập.",
+    "image": "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?w=800&q=80",
+    "locationCount": 4,
+    "highlights": [
+      "Núi Bà Đen",
+      "Tòa Thánh Tây Ninh",
+      "Vườn QG Tràm Chim",
+      "Làng Chiếu Định Yên"
+    ],
+    "mergedFrom": [
+      "Tây Ninh",
+      "Long An"
+    ],
+    "mergedSlugs": [
+      "tay-ninh",
+      "long-an"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "can-tho",
+    "slug": "can-tho",
+    "name": "TP. Cần Thơ",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Cần Thơ",
+    "area": 6322.5,
+    "population": 3182300,
+    "description": "Hợp nhất TP. Cần Thơ, Sóc Trăng và Hậu Giang – trung tâm ĐBSCL với Chợ nổi Cái Răng, bến Ninh Kiều, chùa Dơi và lễ hội đua ghe Ngo.",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Chợ Nổi Cái Răng",
+      "Làng Mỹ Khánh",
+      "Cồn Sơn",
+      "Chùa Dơi",
+      "Chùa Đất Sét"
+    ],
+    "mergedFrom": [
+      "Cần Thơ",
+      "Sóc Trăng",
+      "Hậu Giang"
+    ],
+    "mergedSlugs": [
+      "can-tho",
+      "soc-trang",
+      "hau-giang"
+    ],
+    "note": "Sáp nhập từ 3 đơn vị hành chính"
+  },
+  {
+    "id": "vinh-long",
+    "slug": "vinh-long",
+    "name": "Vĩnh Long",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Vĩnh Long",
+    "area": 6178,
+    "population": 3360400,
+    "description": "Hợp nhất Vĩnh Long, Bến Tre và Trà Vinh – miệt vườn cù lao xanh mát xứ dừa hòa quyện văn hóa chùa Khmer Nam Bộ cổ kính.",
+    "image": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
+    "locationCount": 6,
+    "highlights": [
+      "Chợ Nổi Trà Ôn",
+      "Cù lao An Bình",
+      "Cù Lao Minh",
+      "Vườn Trái Cây",
+      "Chùa Khmer"
+    ],
+    "mergedFrom": [
+      "Vĩnh Long",
+      "Bến Tre",
+      "Trà Vinh"
+    ],
+    "mergedSlugs": [
+      "vinh-long",
+      "ben-tre",
+      "tra-vinh"
+    ],
+    "note": "Sáp nhập từ 3 đơn vị hành chính"
+  },
+  {
+    "id": "dong-thap",
+    "slug": "dong-thap",
+    "name": "Đồng Tháp",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Mỹ Tho",
+    "area": 5882.8,
+    "population": 3351700,
+    "description": "Hợp nhất Đồng Tháp và Tiền Giang, quy tụ làng hoa Sa Đéc, Vườn quốc gia Tràm Chim cùng du lịch sông nước cù lao Thới Sơn – Cồn Phụng.",
+    "image": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800&q=80",
+    "locationCount": 4,
+    "highlights": [
+      "Vườn QG Tràm Chim",
+      "Làng Hoa Sa Đéc",
+      "Cồn Phụng",
+      "Cù Lao Thới Sơn"
+    ],
+    "mergedFrom": [
+      "Đồng Tháp",
+      "Tiền Giang"
+    ],
+    "mergedSlugs": [
+      "dong-thap",
+      "tien-giang"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "ca-mau",
+    "slug": "ca-mau",
+    "name": "Cà Mau",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Cà Mau",
+    "area": 8000.7,
+    "population": 2088200,
+    "description": "Hợp nhất Cà Mau và Bạc Liêu nơi cực Nam Tổ quốc, kết nối Đất Mũi Cà Mau, rừng U Minh Hạ với cánh đồng điện gió và Nhà Công tử Bạc Liêu.",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "locationCount": 5,
+    "highlights": [
+      "Mũi Cà Mau",
+      "Rừng Ngập Mặn",
+      "Đất Mũi",
+      "Vườn Chim Bạc Liêu",
+      "Nhà Công Tử Bạc Liêu"
+    ],
+    "mergedFrom": [
+      "Cà Mau",
+      "Bạc Liêu"
+    ],
+    "mergedSlugs": [
+      "ca-mau",
+      "bac-lieu"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  },
+  {
+    "id": "an-giang",
+    "slug": "an-giang",
+    "name": "An Giang",
+    "region": "Miền Nam",
+    "regionCode": "south",
+    "capital": "Rạch Giá",
+    "area": 9885.2,
+    "population": 3619700,
+    "description": "Hợp nhất An Giang và Kiên Giang, hội tụ vùng Thất Sơn tâm linh Châu Đốc – rừng tràm Trà Sư và thiên đường đảo ngọc Phú Quốc – Nam Du.",
+    "image": "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?w=800&q=80",
+    "locationCount": 7,
+    "highlights": [
+      "Núi Sam",
+      "Chùa Bà Chúa Xứ",
+      "Châu Đốc",
+      "Đảo Phú Quốc",
+      "Bãi Sao"
+    ],
+    "mergedFrom": [
+      "An Giang",
+      "Kiên Giang"
+    ],
+    "mergedSlugs": [
+      "an-giang",
+      "kien-giang"
+    ],
+    "note": "Sáp nhập từ 2 đơn vị hành chính"
+  }
+]

@@ -1,0 +1,115 @@
+CREATE DATABASE IF NOT EXISTS vietnamdiscovery DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE vietnamdiscovery;
+
+-- Bảng Users
+CREATE TABLE IF NOT EXISTS users (
+  id VARCHAR(100) PRIMARY KEY,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(255),
+  role VARCHAR(50) DEFAULT 'user',
+  avatar LONGTEXT NULL,
+  status VARCHAR(20) DEFAULT 'active',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Thêm user admin mặc định (mật khẩu: admin123)
+INSERT IGNORE INTO users (id, username, email, password, role, avatar, status, created_at) 
+VALUES ('admin', 'admin', 'admin@vietnamtourism.vn', '$2a$10$Dn0PSZeWI4bDWbg9wSdK9e8Prc2hGxJS.oKQFwdbl8udQsVSMEWXq', 'admin', NULL, 'active', NOW()); 
+
+-- Bảng OTPs (Lưu thông tin đăng ký tạm thời)
+CREATE TABLE IF NOT EXISTS otps (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  otp_code VARCHAR(20) NOT NULL,
+  expires_at BIGINT NOT NULL
+);
+
+-- Bảng Tỉnh Thành
+CREATE TABLE IF NOT EXISTS provinces (
+  id VARCHAR(50) NOT NULL,
+  slug VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  type VARCHAR(50) NOT NULL,
+  region_code VARCHAR(50),
+  capital VARCHAR(100),
+  image TEXT,
+  area INT DEFAULT 0,
+  population INT DEFAULT 0,
+  description TEXT,
+  region VARCHAR(100),
+  merged_from JSON,
+  PRIMARY KEY (id, type),
+  INDEX idx_slug (slug),
+  INDEX idx_id (id)
+);
+
+-- Bảng Locations (Địa điểm)
+CREATE TABLE IF NOT EXISTS locations (
+  id VARCHAR(100) PRIMARY KEY,
+  province_id VARCHAR(50) NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  type VARCHAR(50) DEFAULT 'discovery',
+  rating INT DEFAULT 5,
+  description TEXT,
+  image TEXT,
+  images_json JSON,
+  tags_json JSON,
+  author VARCHAR(100) NOT NULL,
+  status VARCHAR(20) DEFAULT 'pending',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_province (province_id),
+  INDEX idx_author (author),
+  INDEX idx_status (status)
+);
+
+-- Bảng Notifications
+CREATE TABLE IF NOT EXISTS notifications (
+  id VARCHAR(100) PRIMARY KEY,
+  type VARCHAR(50) NOT NULL,
+  message TEXT NOT NULL,
+  location_id VARCHAR(100),
+  target_user VARCHAR(100) NOT NULL,
+  is_read BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_target_user (target_user)
+);
+
+-- Bảng Comments
+CREATE TABLE IF NOT EXISTS comments (
+  id VARCHAR(100) PRIMARY KEY,
+  location_id VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  content TEXT NOT NULL,
+  parent_id VARCHAR(100),
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_location (location_id),
+  INDEX idx_username (username)
+);
+
+-- Bảng Reactions
+CREATE TABLE IF NOT EXISTS location_reactions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  location_id VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  type VARCHAR(50) DEFAULT 'like',
+  UNIQUE KEY uq_loc_user (location_id, username)
+);
+
+-- Bảng Tin nhắn Hỗ trợ Realtime giữa Người dùng và Admin (User <-> Admin)
+CREATE TABLE IF NOT EXISTS support_messages (
+  id VARCHAR(100) PRIMARY KEY,
+  sender_username VARCHAR(100) NOT NULL,
+  sender_role VARCHAR(20) NOT NULL DEFAULT 'user',
+  receiver_username VARCHAR(100) NOT NULL,
+  conversation_id VARCHAR(100) NOT NULL,
+  message TEXT NOT NULL,
+  is_read BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_conversation (conversation_id),
+  INDEX idx_sender (sender_username),
+  INDEX idx_receiver (receiver_username),
+  INDEX idx_created (created_at)
+);

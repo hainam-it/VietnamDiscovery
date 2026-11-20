@@ -1,0 +1,307 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { Send, Mic, Sparkles, RefreshCw } from 'lucide-react';
+import FormattedText from '../utils/formatMarkdown';
+
+const MakeYourTripChat = ({
+  messages = [],
+  onSendMessage = () => {},
+  loading = false,
+  suggestedPrompts = [],
+  onSelectPrompt = () => {}
+}) => {
+  const [inputText, setInputText] = useState('');
+  const [isListening, setIsListening] = useState(false);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    const container = messagesEndRef.current?.parentElement;
+    if (container) container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, loading]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!inputText.trim() || loading) return;
+    onSendMessage(inputText.trim());
+    setInputText('');
+  };
+
+  const handleToggleVoice = () => {
+    if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+      alert('Trình duyệt của bạn chưa hỗ trợ nhận diện giọng nói trực tiếp. Bạn có thể nhập văn bản!');
+      return;
+    }
+
+    try {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'vi-VN';
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onstart = () => setIsListening(true);
+      recognition.onend = () => setIsListening(false);
+      recognition.onerror = () => setIsListening(false);
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        if (transcript) {
+          setInputText(prev => (prev ? prev + ' ' + transcript : transcript));
+        }
+      };
+
+      recognition.start();
+    } catch (e) {
+      console.warn('Speech recognition error:', e);
+      setIsListening(false);
+    }
+  };
+
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      minHeight: '620px',
+      background: '#FFFFFF',
+      borderRadius: '12px',
+      border: '1px solid #E2E8F0',
+      boxShadow: '0 4px 20px rgba(8, 116, 67, 0.05)',
+      overflow: 'hidden'
+    }}>
+
+      <div style={{
+        padding: '1rem 1.25rem',
+        borderBottom: '1px solid #F1F5F9',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        background: '#FAFBFD'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+          <div style={{
+            width: '36px',
+            height: '36px',
+            borderRadius: '10px',
+            background: 'linear-gradient(135deg, #075C37 0%, #0E8C51 100%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#FFFFFF'
+          }}>
+            <Sparkles size={18} />
+          </div>
+          <div>
+            <div style={{ fontSize: '0.95rem', fontWeight: 800, color: 'var(--brand-navy)' }}>
+              Trợ lý AI Lập Lịch Trình
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.75rem', color: '#10B981', fontWeight: 600 }}>
+              <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10B981', display: 'inline-block' }}></span>
+              Tư vấn trực tiếp 24/7
+            </div>
+          </div>
+        </div>
+
+        <div style={{
+          background: '#EEF3EF',
+          color: '#0E8C51',
+          padding: '0.25rem 0.65rem',
+          borderRadius: '12px',
+          fontSize: '0.75rem',
+          fontWeight: 700
+        }}>
+          Vietnam Discovery AI
+        </div>
+      </div>
+
+      <div style={{
+        flex: 1,
+        padding: '1.25rem',
+        overflowY: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        background: '#FAFBFD'
+      }}>
+
+        {messages.map((msg, index) => {
+          const isUser = msg.sender === 'user';
+
+          return (
+            <div
+              key={index}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: isUser ? 'flex-end' : 'flex-start',
+                width: '100%'
+              }}
+            >
+              {isUser ? (
+                <div style={{
+                  maxWidth: '85%',
+                  background: '#E0F2FE',
+                  color: '#0369A1',
+                  padding: '0.85rem 1.15rem',
+                  borderRadius: '10px 10px 2px 10px',
+                  fontSize: '0.92rem',
+                  fontWeight: 500,
+                  lineHeight: 1.5,
+                  boxShadow: '0 2px 6px rgba(8, 116, 67, 0.08)',
+                  wordBreak: 'break-word'
+                }}>
+                  {msg.text}
+                </div>
+              ) : (
+                <div style={{
+                  maxWidth: '92%',
+                  background: '#FFFFFF',
+                  color: '#1E293B',
+                  padding: '1rem 1.15rem',
+                  borderRadius: '2px 10px 10px 10px',
+                  fontSize: '0.9rem',
+                  lineHeight: 1.6,
+                  border: '1px solid #E2E8F0',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
+                  wordBreak: 'break-word'
+                }}>
+                  <FormattedText text={msg.text} />
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {loading && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.5rem 0' }}>
+            <div style={{
+              background: '#FFFFFF',
+              border: '1px solid #E2E8F0',
+              padding: '0.75rem 1rem',
+              borderRadius: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              fontSize: '0.85rem',
+              color: '#64748B'
+            }}>
+              <RefreshCw size={14} className="spin" style={{ animation: 'spin 1s linear infinite' }} />
+              <span>AI đang phân tích và tối ưu lịch trình...</span>
+            </div>
+          </div>
+        )}
+
+        <div ref={messagesEndRef} />
+      </div>
+
+      {suggestedPrompts && suggestedPrompts.length > 0 && (
+        <div style={{
+          padding: '0.5rem 1rem',
+          background: '#FFFFFF',
+          borderTop: '1px solid #F1F5F9',
+          display: 'flex',
+          gap: '6px',
+          overflowX: 'auto',
+          whiteSpace: 'nowrap'
+        }}>
+          {suggestedPrompts.map((prompt, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => onSelectPrompt(prompt)}
+              style={{
+                padding: '0.35rem 0.75rem',
+                borderRadius: '6px',
+                border: '1px solid #BFDBFE',
+                background: '#EEF3EF',
+                color: '#0E8C51',
+                fontSize: '0.8rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.15s'
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = '#DBEAFE'}
+              onMouseLeave={e => e.currentTarget.style.background = '#EEF3EF'}
+            >
+              {prompt}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} style={{
+        padding: '0.75rem 1rem',
+        borderTop: '1px solid #E2E8F0',
+        background: '#FFFFFF',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '8px'
+      }}>
+        <input
+          type="text"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+          placeholder="Nhập mong muốn hoặc chia sẻ link tiktok liên quan đến chuyến du lịch"
+          disabled={loading}
+          style={{
+            flex: 1,
+            padding: '0.75rem 1rem',
+            borderRadius: '8px',
+            border: '1px solid #D1D5DB',
+            outline: 'none',
+            fontSize: '0.88rem',
+            fontFamily: 'inherit',
+            color: '#0F172A',
+            background: '#F8FAFC'
+          }}
+        />
+
+        <button
+          type="button"
+          onClick={handleToggleVoice}
+          style={{
+            width: '38px',
+            height: '38px',
+            borderRadius: '50%',
+            border: 'none',
+            background: isListening ? '#FEE2E2' : '#F1F5F9',
+            color: isListening ? '#EF4444' : '#64748B',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'all 0.15s'
+          }}
+          title={isListening ? 'Đang lắng nghe...' : 'Nói yêu cầu qua micro'}
+        >
+          <Mic size={18} />
+        </button>
+
+        <button
+          type="submit"
+          disabled={!inputText.trim() || loading}
+          style={{
+            width: '38px',
+            height: '38px',
+            borderRadius: '50%',
+            border: 'none',
+            background: inputText.trim() && !loading ? 'var(--brand-navy)' : '#CBD5E1',
+            color: '#FFFFFF',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: inputText.trim() && !loading ? 'pointer' : 'default',
+            transition: 'all 0.15s'
+          }}
+        >
+          <Send size={16} />
+        </button>
+      </form>
+
+    </div>
+  );
+};
+
+export default MakeYourTripChat;

@@ -1,0 +1,48 @@
+import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import ProvincesPage from './pages/ProvincesPage';
+import ProvinceDetailPage from './pages/ProvinceDetailPage';
+import LocationDetailPage from './pages/LocationDetailPage';
+import AuthPage from './pages/AuthPage';
+import AdminApprovalPage from './pages/AdminApprovalPage';
+import AdminChatPage from './pages/AdminChatPage';
+import ProfilePage from './pages/ProfilePage';
+import TravelPlannerPage from './pages/TravelPlannerPage';
+import NotFoundPage from './pages/NotFoundPage';
+import ChatWidget from './components/ChatWidget';
+
+function App() {
+  const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || "290652647677-hm7715ipm0ufh8c5lck7vc59qjq80jna.apps.googleusercontent.com";
+  const location = useLocation();
+  const isAdminChat = location.pathname.startsWith('/admin/chat');
+  
+  return (
+    <GoogleOAuthProvider clientId={clientId}>
+      <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Navbar />
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/provinces" element={<ProvincesPage />} />
+          <Route path="/provinces/:slug" element={<ProvinceDetailPage />} />
+          <Route path="/locations/:id" element={<LocationDetailPage />} />
+          <Route path="/planner" element={<TravelPlannerPage />} />
+          <Route path="/admin/approvals" element={<AdminApprovalPage />} />
+          <Route path="/admin/chat" element={<AdminChatPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </main>
+      {!isAdminChat && <Footer />}
+      {!isAdminChat && <ChatWidget />}
+    </div>
+    </GoogleOAuthProvider>
+  );
+}
+
+export default App;
