@@ -406,7 +406,3 @@ Repository lưu trữ mã nguồn, cấu hình Docker Compose, tài liệu hư�
 **Nguyễn Trọng Hải Nam**
 
 Project Developer – Vietnam Discovery
-
----
-
-\<p align="center">   🇻🇳 \<strong>VIETNAM DISCOVERY\</strong>   \<br/>   \<em>Trọn Vẹn Vẻ Đẹp Việt Nam\</em>   \<br/>\<br/>   Khám phá Việt Nam – Kết nối hành trình – Lan tỏa trải nghiệm. \</p>
